@@ -45,7 +45,8 @@ export function Footer() {
           </a>
         </div>
         <p className="mt-8 text-xs text-kabu-muted">
-          © 2026 Kabu. Transformation through patience and precision. Built for the next generation of strategic investors.
+          © 2026 Kabu. Transformation through patience and precision. Built for the next generation
+          of strategic investors.
         </p>
       </div>
     </footer>

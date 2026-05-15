@@ -24,11 +24,10 @@ function LessonScreen() {
       <div className="text-[10px] font-semibold uppercase tracking-wider text-kabu-muted">
         Unit 1 · Lesson 3
       </div>
-      <h4 className="mt-2 text-lg font-bold text-foreground leading-tight">
-        What's a P/E ratio?
-      </h4>
+      <h4 className="mt-2 text-lg font-bold text-foreground leading-tight">What's a P/E ratio?</h4>
       <p className="mt-3 text-xs leading-relaxed text-kabu-muted">
-        It's a stock's price divided by its earnings per share. High P/E = investors expect growth. Low P/E = a bargain or a warning.
+        It's a stock's price divided by its earnings per share. High P/E = investors expect growth.
+        Low P/E = a bargain or a warning.
       </p>
       <div className="mt-5 text-xs font-semibold text-foreground">
         Apple trades at $180. EPS is $6. What's the P/E?
@@ -97,9 +96,7 @@ export function Features() {
                 <h3 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                   {f.title}
                 </h3>
-                <p className="mt-4 max-w-md text-base leading-relaxed text-kabu-muted">
-                  {f.body}
-                </p>
+                <p className="mt-4 max-w-md text-base leading-relaxed text-kabu-muted">{f.body}</p>
               </div>
               <div className="flex justify-center">
                 <PhoneMock label={f.label}>{f.mock}</PhoneMock>
@@ -111,4 +108,3 @@ export function Features() {
     </section>
   );
 }
-

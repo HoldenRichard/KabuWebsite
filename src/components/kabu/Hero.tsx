@@ -6,9 +6,7 @@ function PhoneFrame({ children }: { children: React.ReactNode }) {
     <div className="relative mx-auto w-[260px] sm:w-[300px]">
       <div className="relative rounded-[2.75rem] border-[10px] border-black bg-black shadow-[0_30px_80px_-30px_rgba(0,0,0,0.3)]">
         <div className="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
-        <div className="relative h-[620px] overflow-hidden rounded-[2rem] bg-white">
-          {children}
-        </div>
+        <div className="relative h-[620px] overflow-hidden rounded-[2rem] bg-white">{children}</div>
       </div>
     </div>
   );
@@ -61,12 +59,16 @@ function LearnPathScreen() {
 
         <div className="absolute left-1/2 top-[28px] -translate-x-1/2">
           <div className="kabu-pulse flex h-14 w-14 items-center justify-center rounded-full bg-kabu-green text-white">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </div>
         </div>
 
         <div className="absolute left-4 top-[110px] right-4 rounded-xl border border-black/5 bg-kabu-soft p-3">
-          <div className="text-[10px] font-semibold uppercase tracking-wide text-kabu-muted">Unit 2</div>
+          <div className="text-[10px] font-semibold uppercase tracking-wide text-kabu-muted">
+            Unit 2
+          </div>
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-foreground">How markets work</span>
             <span className="text-[10px] text-kabu-muted">0/15 ★</span>
@@ -74,14 +76,37 @@ function LearnPathScreen() {
         </div>
 
         <div className="absolute left-1/2 top-[210px] -translate-x-1/2 rotate-45 h-12 w-12 rounded-md bg-kabu-green flex items-center justify-center">
-          <svg className="-rotate-45" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><path d="M5 12l5 5L20 7" /></svg>
+          <svg
+            className="-rotate-45"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="3"
+          >
+            <path d="M5 12l5 5L20 7" />
+          </svg>
         </div>
-        <div className="absolute right-6 top-[218px] text-[11px] font-medium text-foreground">The 2020 Crash</div>
+        <div className="absolute right-6 top-[218px] text-[11px] font-medium text-foreground">
+          The 2020 Crash
+        </div>
 
         <div className="absolute left-1/2 top-[300px] -translate-x-1/2 h-12 w-12 rounded-full bg-kabu-green flex items-center justify-center">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><path d="M5 12l5 5L20 7" /></svg>
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="3"
+          >
+            <path d="M5 12l5 5L20 7" />
+          </svg>
         </div>
-        <div className="absolute left-1/2 top-[358px] -translate-x-1/2 text-[10px] text-kabu-green font-medium">★★</div>
+        <div className="absolute left-1/2 top-[358px] -translate-x-1/2 text-[10px] text-kabu-green font-medium">
+          ★★
+        </div>
       </div>
 
       <div className="border-t border-black/5 px-6 py-3 flex justify-between text-[10px] text-kabu-muted">
@@ -107,7 +132,11 @@ export function Hero() {
           </p>
           <div className="mt-8">
             <button
-              onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document
+                  .getElementById("testflight-button")
+                  ?.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
               className="rounded-lg bg-kabu-green px-7 py-3.5 text-base font-semibold text-white transition-transform duration-200 hover:scale-[1.02] hover:bg-kabu-green-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kabu-green"
             >
               Join the Beta

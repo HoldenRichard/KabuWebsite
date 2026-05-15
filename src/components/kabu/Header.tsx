@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { KabuLogo } from "./Logo";
 
 function scrollToId(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 export function Header() {

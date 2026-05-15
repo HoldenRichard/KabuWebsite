@@ -30,7 +30,15 @@ function buildPath() {
   }).join(" ");
 }
 
-function CountUp({ to, suffix = "", duration = 1200 }: { to: number; suffix?: string; duration?: number }) {
+function CountUp({
+  to,
+  suffix = "",
+  duration = 1200,
+}: {
+  to: number;
+  suffix?: string;
+  duration?: number;
+}) {
   const [v, setV] = useState(0);
   useEffect(() => {
     const start = performance.now();
@@ -45,7 +53,13 @@ function CountUp({ to, suffix = "", duration = 1200 }: { to: number; suffix?: st
     return () => cancelAnimationFrame(raf);
   }, [to, duration]);
   const sign = to > 0 ? "+" : "";
-  return <span className="tabular-nums">{sign}{v.toFixed(0)}{suffix}</span>;
+  return (
+    <span className="tabular-nums">
+      {sign}
+      {v.toFixed(0)}
+      {suffix}
+    </span>
+  );
 }
 
 export function Scenario() {
@@ -113,7 +127,9 @@ export function Scenario() {
             <div className="rounded-2xl border border-black/5 bg-white p-4 shadow-sm sm:p-6">
               <div className="mb-3 flex items-center justify-between text-xs text-kabu-muted">
                 <span>S&amp;P 500 · Feb–Dec 2020</span>
-                <span>Your choice: <span className="font-semibold text-foreground">{choice}</span></span>
+                <span>
+                  Your choice: <span className="font-semibold text-foreground">{choice}</span>
+                </span>
               </div>
               <svg viewBox={`0 0 ${W} ${H}`} className="h-auto w-full">
                 {[0, 1, 2, 3].map((i) => (
@@ -145,7 +161,11 @@ export function Scenario() {
                 />
               </svg>
               <div className="mt-2 flex justify-between px-2 text-[10px] text-kabu-muted">
-                <span>Feb</span><span>Mar</span><span>Jun</span><span>Sep</span><span>Dec</span>
+                <span>Feb</span>
+                <span>Mar</span>
+                <span>Jun</span>
+                <span>Sep</span>
+                <span>Dec</span>
               </div>
             </div>
 
@@ -154,23 +174,38 @@ export function Scenario() {
                 What actually happened
               </div>
               <p className="mt-2 text-base leading-relaxed text-foreground">
-                The market fell another <span className="font-bold">24%</span> before bottoming on March 23.
-                By August it had fully recovered. Year-end:{" "}
-                <span className="font-bold text-kabu-green"><CountUp to={16} suffix="%" /></span>.
+                The market fell another <span className="font-bold">24%</span> before bottoming on
+                March 23. By August it had fully recovered. Year-end:{" "}
+                <span className="font-bold text-kabu-green">
+                  <CountUp to={16} suffix="%" />
+                </span>
+                .
               </p>
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 <div className="rounded-lg border border-black/5 bg-white p-4">
-                  <div className="text-[11px] font-semibold uppercase text-kabu-muted">If you held</div>
-                  <div className="mt-1 text-2xl font-bold text-kabu-green"><CountUp to={16} suffix="%" /></div>
+                  <div className="text-[11px] font-semibold uppercase text-kabu-muted">
+                    If you held
+                  </div>
+                  <div className="mt-1 text-2xl font-bold text-kabu-green">
+                    <CountUp to={16} suffix="%" />
+                  </div>
                 </div>
                 <div className="rounded-lg border border-black/5 bg-white p-4">
-                  <div className="text-[11px] font-semibold uppercase text-kabu-muted">If you bought the dip</div>
-                  <div className="mt-1 text-2xl font-bold text-kabu-green"><CountUp to={47} suffix="%" /></div>
+                  <div className="text-[11px] font-semibold uppercase text-kabu-muted">
+                    If you bought the dip
+                  </div>
+                  <div className="mt-1 text-2xl font-bold text-kabu-green">
+                    <CountUp to={47} suffix="%" />
+                  </div>
                   <div className="text-[10px] text-kabu-muted">on the additional shares</div>
                 </div>
                 <div className="rounded-lg border border-black/5 bg-white p-4">
-                  <div className="text-[11px] font-semibold uppercase text-kabu-muted">If you sold</div>
-                  <div className="mt-1 text-2xl font-bold text-foreground">−<CountUp to={10} suffix="%" /></div>
+                  <div className="text-[11px] font-semibold uppercase text-kabu-muted">
+                    If you sold
+                  </div>
+                  <div className="mt-1 text-2xl font-bold text-foreground">
+                    −<CountUp to={10} suffix="%" />
+                  </div>
                   <div className="text-[10px] text-kabu-muted">locked-in loss</div>
                 </div>
               </div>
@@ -188,7 +223,11 @@ export function Scenario() {
                   Reset
                 </button>
                 <button
-                  onClick={() => document.getElementById("testflight-button")?.scrollIntoView({ behavior: "smooth", block: "center" })}
+                  onClick={() =>
+                    document
+                      .getElementById("testflight-button")
+                      ?.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
                   className="rounded-md bg-kabu-green px-4 py-2 text-sm font-bold text-white transition-transform duration-200 hover:scale-[1.02] hover:bg-kabu-green-hover"
                 >
                   Join the Beta →
