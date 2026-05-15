@@ -176,19 +176,19 @@ export function Scenario() {
               </div>
             </div>
 
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-foreground p-5 text-white">
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-black/5 bg-zinc-100 p-5 text-foreground">
               <span className="text-sm font-medium">
                 Want 12 more scenarios like this in your pocket?
               </span>
               <div className="flex gap-2">
                 <button
                   onClick={reset}
-                  className="rounded-md border border-white/20 px-3 py-2 text-xs font-medium hover:bg-white/10"
+                  className="rounded-md border border-black/10 px-3 py-2 text-xs font-medium hover:bg-black/5"
                 >
                   Reset
                 </button>
                 <button
-                  onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("testflight-button")?.scrollIntoView({ behavior: "smooth", block: "center" })}
                   className="rounded-md bg-kabu-green px-4 py-2 text-sm font-bold text-white transition-transform duration-200 hover:scale-[1.02] hover:bg-kabu-green-hover"
                 >
                   Join the Beta →

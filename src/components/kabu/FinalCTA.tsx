@@ -11,6 +11,7 @@ export function FinalCTA() {
         </FadeUp>
         <FadeUp delay={80}>
           <a
+            id="testflight-button"
             href="https://testflight.apple.com/join/n99rSFvg"
             target="_blank"
             rel="noopener noreferrer"
