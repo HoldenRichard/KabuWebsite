@@ -14,7 +14,7 @@ const STEPS = [
   {
     n: "3",
     title: "Unlock the paper trading sandbox",
-    body: "Earn $25,000 in virtual money after Unit 3. Practice trading real markets with zero risk.",
+    body: "Earn $25,000 in virtual money after Unit 4. Practice trading real markets with zero risk.",
   },
 ];
 

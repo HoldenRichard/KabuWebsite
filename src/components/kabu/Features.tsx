@@ -74,7 +74,7 @@ const FEATURES = [
   },
   {
     title: "Stay hooked",
-    body: "Levels (Rookie Trader → Fund Manager), XP, streaks, daily challenges, and badges. Track your scenarios, lessons, and stars as you climb. Build the habit before you build the portfolio.",
+    body: "Levels (Newcomer → Owner), XP, streaks, daily challenges, and badges. Track your scenarios, lessons, and stars as you climb. Build the habit before you build the portfolio.",
     mock: <ImageScreen src={progressImg} alt="Kabu progress and gamification screen" />,
     label: "Progress",
     reverse: false,

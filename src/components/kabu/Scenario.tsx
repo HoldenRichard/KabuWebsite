@@ -213,7 +213,7 @@ export function Scenario() {
 
             <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-black/5 bg-zinc-100 p-5 text-foreground">
               <span className="text-sm font-medium">
-                Want 12 more scenarios like this in your pocket?
+                Kabu ships four scenarios like this one, including the 2008 finale.
               </span>
               <div className="flex gap-2">
                 <button
