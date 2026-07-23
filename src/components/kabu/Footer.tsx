@@ -52,6 +52,12 @@ export function Footer() {
           >
             Privacy
           </Link>
+          <Link
+            to="/support"
+            className="text-kabu-muted transition-colors duration-200 hover:text-foreground"
+          >
+            Support
+          </Link>
         </nav>
         <p className="mt-4 text-xs text-kabu-muted">
           © 2026 Kabu. Transformation through patience and precision. Built for the next generation

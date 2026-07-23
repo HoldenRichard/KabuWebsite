@@ -42,7 +42,7 @@ function inline(text: string, keyBase: string): ReactNode[] {
     );
 }
 
-type Block = { kind: "h1" | "h2" | "p"; text: string };
+type Block = { kind: "h1" | "h2" | "p" | "q"; text: string };
 
 function parse(source: string): Block[] {
   const blocks: Block[] = [];
@@ -61,6 +61,10 @@ function parse(source: string): Block[] {
     } else if (line.startsWith("# ")) {
       flush();
       blocks.push({ kind: "h1", text: line.slice(2) });
+    } else if (/^\*\*[^*]+\*\*$/.test(line.trim())) {
+      // A line that is entirely bold stands alone (Q&A question lines)
+      flush();
+      blocks.push({ kind: "q", text: line.trim() });
     } else if (line.trim() === "") {
       flush();
     } else {
@@ -94,6 +98,10 @@ export function LegalPage({ source }: { source: string }) {
             <h2 key={i} className="mt-10 text-xl font-bold tracking-tight text-foreground">
               {b.text}
             </h2>
+          ) : b.kind === "q" ? (
+            <p key={i} className="mt-6 text-[15px] leading-relaxed">
+              {inline(b.text, `q${i}`)}
+            </p>
           ) : (
             <p key={i} className="mt-4 text-[15px] leading-relaxed text-kabu-muted">
               {inline(b.text, `p${i}`)}
