@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { KabuLogo } from "./Logo";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -44,7 +45,15 @@ export function Footer() {
             <TikTokIcon className="h-6 w-6" />
           </a>
         </div>
-        <p className="mt-8 text-xs text-kabu-muted">
+        <nav className="mt-8 flex justify-center gap-6 text-xs">
+          <Link
+            to="/privacy"
+            className="text-kabu-muted transition-colors duration-200 hover:text-foreground"
+          >
+            Privacy
+          </Link>
+        </nav>
+        <p className="mt-4 text-xs text-kabu-muted">
           © 2026 Kabu. Transformation through patience and precision. Built for the next generation
           of strategic investors.
         </p>
